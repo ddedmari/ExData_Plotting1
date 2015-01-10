@@ -1,3 +1,5 @@
+#author: Dawar Dedmari
+#created on: 11 jan 2015
 # This code will generate a histogram called plot4.png
 
 
@@ -15,7 +17,7 @@ library(data.table)
 
 my_data <- fread("/Users/ddedmari/my_R/Exploratory_Data_Analysis/household_power_consumption.txt", skip="1/2/2007", nrows = rowsToRead, na.strings = c("?", ""))
 
-#since we loose the headers during fread, just adding them back
+#since we lose the headers during fread, just adding them back
 
 setnames(my_data, colnames(fread("/Users/ddedmari/my_R/Exploratory_Data_Analysis/household_power_consumption.txt", nrows=0)))
 
@@ -29,7 +31,7 @@ png(filename = "plot4.png", width = 480, height = 480, units = "px", pointsize =
  
 # creating my plots
 
-#setting par for two rows and two cols
+#setting par for displaying four graphs in two rows and two cols in a single page
 
 par(mfrow = c(2,2))
 

@@ -1,3 +1,5 @@
+#author: Dawar Dedmari
+#created on: 11 jan 2015
 # This code will generate a histogram called plot2.png
 
 
@@ -15,7 +17,7 @@ library(data.table)
 
 my_data <- fread("/Users/ddedmari/my_R/Exploratory_Data_Analysis/household_power_consumption.txt", skip="1/2/2007", nrows = rowsToRead, na.strings = c("?", ""))
 
-#since we loose the headers during fread, just adding them back
+#since we lose the headers during fread, just adding them back
 
 setnames(my_data, colnames(fread("/Users/ddedmari/my_R/Exploratory_Data_Analysis/household_power_consumption.txt", nrows=0)))
 
